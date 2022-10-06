@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int m;
+int sum1=0,sum2=0;
+int diff;
+cin>>m;
+int sum=0;
+int arr[m][m];
+
+
+
+for(int i=0; i<m;i++)
+{
+    for(int j =0; j<m; j++)
+    {
+        cin>>arr[i][j];
+    }
+}
+
+for(int i=0; i<m;i++)
+{
+    for(int j =0; j<m; j++)
+    {
+        if(i==j)
+        {
+            sum1+=arr[i][j];
+        }
+        if (i+j==m-1)
+        {
+            sum2+=arr[i][j];
+        }
+    }
+}
+diff=sum1-sum2;
+if(diff<0)
+{
+    cout<<(-1*diff);
+}
+else
+cout<<endl<<diff;
+return 0;
+}
